@@ -1,0 +1,10 @@
+﻿<?
+	include("conexao.php");
+
+	session_start(login);
+	if ((isset($_SESSION['login']) || isset($_SESSION['senha']))){
+	set_time_limit (60*60*2);
+	}else{
+	header('Location: logout.php');
+	} 
+?>

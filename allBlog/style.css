@@ -1,0 +1,28 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+background-color: #000;
+color: #FFF;
+}
+
+.bodyIndex {
+width: 700px;
+height: auto;
+border-right: 1px solid #FFF;
+}
+
+.notificationIndex {
+width: 250px;
+height: auto;
+}
+
+.headAll {
+width: 950 px;
+height: auto;
+}
+
+#Link {
+cursor: pointer;
+}
+
