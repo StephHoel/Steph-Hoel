@@ -1,8 +1,0 @@
-Colocar no extrato.php:
--Ver extrato do mês atual
--Ver extrato do mês anterior
--Ver extrato do mês/ano selecionado
--Ver extrato completo
-
-Melhorar a visualização no gerenciamento.php e no extrato.php:
--Organizar melhor a tabela (dica: data na frente e valor por último)
