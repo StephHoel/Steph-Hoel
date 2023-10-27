@@ -31,7 +31,7 @@ export default function Layout() {
         </nav>
       </header>
 
-      <main className="w-3/4 bg-[lightgray] mx-auto text-black font-kalam text-4xl rounded-tl-2.5xl rounded-br-2.5xl p-4 text-center">
+      <main className="w-3/4 bg-purple-800 mx-auto text-black font-kalam text-4xl rounded-tl-2.5xl rounded-br-2.5xl p-4 text-center">
         <Outlet />
       </main>
 

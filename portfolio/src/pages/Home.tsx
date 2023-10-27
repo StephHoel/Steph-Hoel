@@ -1,4 +1,32 @@
+import { useEffect, useState } from 'react'
+
 export default function Home() {
+  const apiKey = process.env.REACT_APP_API_KEY
+  const channelID = process.env.REACT_APP_CHANNEL_ID
+  const [videoId, setVideoId] = useState<string | null>(null)
+
+  useEffect(() => {
+    const fetchLastVideo = async () => {
+      try {
+        const response = await fetch(
+          `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelID}&order=date&maxResults=1`,
+        )
+
+        const data = await response.json()
+
+        // console.log(data)
+
+        if (data.items && data.items.length > 0) {
+          const videoId = data.items[0].id.videoId
+          setVideoId(videoId)
+        }
+      } catch (error) {
+        console.error('Erro ao buscar o último vídeo:', error)
+      }
+    }
+    fetchLastVideo()
+  }, [])
+
   return (
     <div className="gap-4 grid">
       <div className="text-5xl text-center normal-case">
@@ -9,10 +37,21 @@ export default function Home() {
         Último post aqui
       </div>
       <hr />
-      <div className="text-5xl text-center bg-[lightgray] p-2.5 rounded-tl-2.5xl rounded-br-2.5xl grid hover:bg-[gray]">
+      <div className="text-5xl text-center p-2.5 grid gap-4">
         <a href="/videos.php">Último Vídeo</a>
-        {/* <?php videoYoutube($conexao, 0, 1); ?> */}
-        Último vídeo aqui
+        <div className="">
+          {videoId ? (
+            <iframe
+              className="mx-auto"
+              src={`https://www.youtube.com/embed/${videoId}`}
+              title="Vídeo do YouTube"
+              frameBorder="0"
+              allowFullScreen
+            />
+          ) : (
+            <p>Carregando...</p>
+          )}
+        </div>
       </div>
     </div>
   )
