@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Kalam&family=Nothing+You+Could+Do&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kalam&family=Nothing+You+Could+Do&display=swap");
 
 * {
   margin: 0;
@@ -30,13 +30,13 @@ body {
   grid-template-rows: max-content 1fr max-content;
 }
 
-.grid-2{
+.grid-2 {
   display: grid;
   grid-template-columns: max-content 1fr;
 }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none; 
-  margin: 0; 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

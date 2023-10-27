@@ -6,9 +6,9 @@ import StephHoelP from '../images/Steph_Hoel_p.png'
 
 export default function Layout() {
   return (
-    <div className="p-4 lg:w-1/2 lg:m-auto" id="body">
+    <div className="p-4 w-3/4 mx-auto" id="body">
       <header className="justify-between items-center pl-4 pb-2 mb-6 select-none">
-        <div className="mx-auto w-[900px] relative mt-0 text-7xl flex items-center justify-center gap-8">
+        <div className="mx-auto relative mt-0 text-7xl flex items-center justify-center gap-8">
           <img src={StephHoelC} alt="Avatar Colorido" className="w-[79px]" />
           Steph Hoel
           <img
@@ -19,15 +19,15 @@ export default function Layout() {
         </div>
 
         <nav className="flex gap-4 justify-center text-center items-center text-black text-3xl mt-4">
-          <MenuItem href="/">Home</MenuItem>
-          <MenuItem href="/videos">Videos</MenuItem>
-          <MenuItem href="/web">Web</MenuItem>
-          <MenuItem href="/jogos">Jogos</MenuItem>
-          <MenuItem href="/blog">Blog</MenuItem>
-          <MenuItem href="/textos">Textos</MenuItem>
-          <MenuItem href="/algiz">Algiz</MenuItem>
-          <MenuItem href="/sobre">Sobre</MenuItem>
-          <MenuItem href="/contato">Contato</MenuItem>
+          <MenuItem href="/Steph-Hoel/">Home</MenuItem>
+          <MenuItem href="/Steph-Hoel/videos">Videos</MenuItem>
+          <MenuItem href="/Steph-Hoel/web">Web</MenuItem>
+          <MenuItem href="/Steph-Hoel/jogos">Jogos</MenuItem>
+          <MenuItem href="/Steph-Hoel/blog">Blog</MenuItem>
+          <MenuItem href="/Steph-Hoel/textos">Textos</MenuItem>
+          <MenuItem href="/Steph-Hoel/algiz">Algiz</MenuItem>
+          <MenuItem href="/Steph-Hoel/sobre">Sobre</MenuItem>
+          <MenuItem href="/Steph-Hoel/contato">Contato</MenuItem>
         </nav>
       </header>
 
