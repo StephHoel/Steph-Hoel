@@ -1,79 +1,91 @@
-export default function Contato() {
-  // $status = $_POST['env'];
-  // if ($status == "enviado"){
-  //   $nome = $_POST['nome'];
-  //   $email = $_POST['email'];
-  //   $assunto = $_POST['assunto'];
-  //   $mensagem = $_POST['mensagem'];
+// import { useState } from 'react'
 
-  //   enviaMensagem($conexao, $nome, $email, $assunto, $mensagem);
-  //   $mensagem = 'Email enviado com sucesso!!!<br>Em breve entrarei em contato.<br><br>Continue navegando! :D';
-  //   salvaLog("$nome: Email enviado", "contato.php");
-  // }
+export default function Contato() {
+  // const [name, setName] = useState('')
+  // const [email, setEmail] = useState('')
+  // const [subject, setSubject] = useState('')
+  // const [message, setMessage] = useState('')
 
   return (
-    <div>
-      <div className="text-5xl text-center">Contato</div>
-      {/* <?php //videoYoutube($conexao, 0, 15); ?> */}
+    <div className="p-2 text-left">
+      <div className="text-5xl text-center mb-4">Contatos</div>
 
-      <div className="text-xl text-justify normal-case mt-4">
-        <form
-          action=""
-          method="post"
-          className="text-center w-3/4 mx-auto grid gap-4 text-2xl"
-          name="envia"
+      <p className="mb-4">
+        E-mail: <strong>steph.hoel@gmail.com</strong>
+      </p>
+      <p>
+        LinkedIn:{' '}
+        <a
+          href="http://www.linkedin.com/in/stephhoel/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-bold underline"
         >
-          <div className="justify-center items-center gap-4 grid-2">
-            <label className="min-w-[65px]">Nome</label>
+          StephHoel
+        </a>
+      </p>
+
+      {/* <div className="text-xl text-justify mt-4">
+        <form className="w-3/5 mx-auto grid gap-4 text-2xl">
+          <div className="items-center grid gap-1">
+            <label>Nome</label>
             <input
-              name="nome"
               type="text"
-              size={55}
               placeholder="Nome"
-              className="p-1 placeholder:text-gray-400"
-              value=""
+              className="p-2 bg-slate-300 outline-none placeholder:text-gray-600"
+              value={name}
+              onChange={(e) => setName(e.currentTarget.value)}
             />
           </div>
-          <div className="justify-center items-center gap-4 grid-2">
-            <label className="min-w-[65px]">E-mail</label>
+          <div className="items-center grid gap-1">
+            <label>E-mail</label>
             <input
-              name="email"
               type="email"
-              size={55}
               placeholder="E-mail"
-              className="p-1 placeholder:text-gray-400"
-              value=""
+              className="p-2 bg-slate-300 outline-none placeholder:text-gray-600"
+              value={email}
+              onChange={(e) => setEmail(e.currentTarget.value)}
             />
           </div>
-          <div className="justify-center items-center gap-4 grid-2">
-            <label className="min-w-[65px]">Assunto</label>
+          <div className="items-center grid gap-1">
+            <label>Assunto</label>
             <input
-              name="assunto"
               type="text"
-              size={55}
               placeholder="Assunto"
-              className="p-1 placeholder:text-gray-400"
-              value=""
+              className="p-2 bg-slate-300 outline-none placeholder:text-gray-600"
+              value={subject}
+              onChange={(e) => setSubject(e.currentTarget.value)}
             />
           </div>
-          <div className="justify-center items-center gap-4 grid-2">
-            <label className="min-w-[65px]">Mensagem</label>
+          <div className="items-center grid gap-1">
+            <label>Mensagem</label>
             <textarea
-              name="mensagem"
               rows={6}
               placeholder="Mensagem"
-              className="p-1 placeholder:text-gray-400"
-              value=""
+              className="p-2 bg-slate-300 outline-none placeholder:text-gray-600"
+              value={message}
+              onChange={(e) => setMessage(e.currentTarget.value)}
             />
           </div>
-          <input type="hidden" name="env" value="enviado" />
-          <input
+          <button
             type="submit"
-            className="mx-auto border py-2 px-6 rounded bg-gray-400 hover:bg-gray-300 cursor-pointer"
-            value="Enviar"
-          />
+            className="mx-auto w-full py-2 px-6 my-4 rounded bg-gray-400 hover:bg-gray-300 cursor-pointer"
+            onClick={(e) => {
+              e.preventDefault()
+
+              //   $nome = $_POST['nome'];
+              //   $email = $_POST['email'];
+              //   $assunto = $_POST['assunto'];
+              //   $mensagem = $_POST['mensagem'];
+
+              //   enviaMensagem($conexao, $nome, $email, $assunto, $mensagem);
+              //   $mensagem = 'Email enviado com sucesso!!!<br>Em breve entrarei em contato.<br><br>Continue navegando! :D';
+            }}
+          >
+            Enviar
+          </button>
         </form>
-      </div>
+      </div> */}
     </div>
   )
 }

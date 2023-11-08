@@ -1,15 +1,17 @@
 import { useEffect, useState } from 'react'
+import { Path } from '../lib/props'
+import { Link } from 'react-router-dom'
 
 export default function Home() {
   const apiKey = process.env.REACT_APP_API_KEY
   const channelID = process.env.REACT_APP_CHANNEL_ID
-  const [videoId, setVideoId] = useState<string | null>(null)
+  const [videoId, setVideoId] = useState<string | null>('FsIJ-FVY_lc')
 
   useEffect(() => {
     const fetchLastVideo = async () => {
       try {
         const response = await fetch(
-          `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelID}&order=date&maxResults=1`,
+          `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelID}&part=snippet,id&order=date&maxResults=1`,
         )
 
         const data = await response.json()
@@ -25,12 +27,14 @@ export default function Home() {
       }
     }
     fetchLastVideo()
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (
     <div className="gap-4 grid">
       <div className="text-5xl text-center normal-case">
-        <a href="/blog.php">Último Post</a>
+        <Link to={Path.blog}>Último Post</Link>
       </div>
       <div className="text-lg text-justify normal-case">
         {/* <?php posts($conexao, 1, ""); ?> */}
@@ -38,8 +42,8 @@ export default function Home() {
       </div>
       <hr />
       <div className="text-5xl text-center p-2.5 grid gap-4">
-        <a href="/videos.php">Último Vídeo</a>
-        <div className="">
+        <p>Último Vídeo</p>
+        <div>
           {videoId ? (
             <iframe
               className="mx-auto"
@@ -49,7 +53,7 @@ export default function Home() {
               allowFullScreen
             />
           ) : (
-            <p>Carregando...</p>
+            <p className="select-none text-3xl">Carregando...</p>
           )}
         </div>
       </div>

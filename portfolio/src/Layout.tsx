@@ -1,8 +1,11 @@
 import { Outlet } from 'react-router-dom'
 
-import MenuItem from '../components/MenuItem'
 import StephHoelC from '../images/Steph_Hoel_c.png'
 import StephHoelP from '../images/Steph_Hoel_p.png'
+
+import { Path } from './lib/props'
+
+import MenuItem from './components/MenuItem'
 
 export default function Layout() {
   return (
@@ -19,15 +22,15 @@ export default function Layout() {
         </div>
 
         <nav className="flex gap-4 justify-center text-center items-center text-black text-3xl mt-4">
-          <MenuItem href="/Steph-Hoel/">Home</MenuItem>
-          <MenuItem href="/Steph-Hoel/videos">Videos</MenuItem>
-          <MenuItem href="/Steph-Hoel/web">Web</MenuItem>
-          <MenuItem href="/Steph-Hoel/jogos">Jogos</MenuItem>
-          <MenuItem href="/Steph-Hoel/blog">Blog</MenuItem>
-          <MenuItem href="/Steph-Hoel/textos">Textos</MenuItem>
-          <MenuItem href="/Steph-Hoel/algiz">Algiz</MenuItem>
-          <MenuItem href="/Steph-Hoel/sobre">Sobre</MenuItem>
-          <MenuItem href="/Steph-Hoel/contato">Contato</MenuItem>
+          <MenuItem href={Path.home}>Home</MenuItem>
+          <MenuItem href={Path.videos}>Videos</MenuItem>
+          <MenuItem href={Path.web}>Web</MenuItem>
+          <MenuItem href={Path.jogos}>Jogos (editar)</MenuItem>
+          <MenuItem href={Path.blog}>Blog (editar)</MenuItem>
+          <MenuItem href={Path.textos}>Textos</MenuItem>
+          {/* <MenuItem href={Path.algiz}>Algiz (editar)</MenuItem> */}
+          <MenuItem href={Path.sobre}>Sobre</MenuItem>
+          <MenuItem href={Path.contato}>Contato</MenuItem>
         </nav>
       </header>
 
