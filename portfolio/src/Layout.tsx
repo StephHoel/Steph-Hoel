@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom'
 
-import StephHoelC from '../images/Steph_Hoel_c.png'
-import StephHoelP from '../images/Steph_Hoel_p.png'
+import StephHoelC from '../src/images/Steph_Hoel_c.png'
+import StephHoelP from '../src/images/Steph_Hoel_p.png'
 
 import { Path } from './lib/props'
 
@@ -26,7 +26,7 @@ export default function Layout() {
           <MenuItem href={Path.videos}>Videos</MenuItem>
           <MenuItem href={Path.web}>Web</MenuItem>
           <MenuItem href={Path.jogos}>Jogos (editar)</MenuItem>
-          <MenuItem href={Path.blog}>Blog (editar)</MenuItem>
+          <MenuItem href={Path.blog}>Blog</MenuItem>
           <MenuItem href={Path.textos}>Textos</MenuItem>
           {/* <MenuItem href={Path.algiz}>Algiz (editar)</MenuItem> */}
           <MenuItem href={Path.sobre}>Sobre</MenuItem>
